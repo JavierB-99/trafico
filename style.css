@@ -1,0 +1,64 @@
+:root {
+	--clouds: #ECF0F1;
+	--concrete: #95A5A6;
+	--shadow: #212121;
+}
+
+body {
+	background-image: url(dust.gif);
+	background-color: rgb(10,10,10);
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	margin: 0px;
+}
+
+.brandName {
+	display: flex;
+	font-weight:100;
+	color: whitesmoke;
+	font-family: 'Koulen', cursive;
+	margin: 1vw 1vw 1vw 1vw;
+	font-size: clamp(1em, 1vw, 1em);
+	position: absolute;
+	top: 0vw;
+	left: 47vw;
+	cursor: default;
+}
+
+.link {
+	font-family: 'Koulen', cursive;
+	color: whitesmoke;
+	border-top: 1px solid var(--clouds);
+	font-size: clamp(2em, 8vw, 7em);
+	display: block;
+	padding: clamp(0.25em, 1vw, 1em) clamp(1em, 4vw, 4em);
+	position: relative;
+	text-decoration: none;
+}
+
+.link:hover:before {
+	width: 100%;
+	transform: translate(5px, 25px);
+	transition: width 600ms ease;
+}
+
+.link:before {
+	background: linear-gradient(
+		to right,
+		transparent,
+		var(--concrete),
+		var(--clouds)
+	);
+	content: "";
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	height: 100%;
+	width: 0%;
+}
+
+.link:nth-child(4) {
+	border-bottom: 1px solid var(--clouds);
+} 
